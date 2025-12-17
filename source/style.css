@@ -1,4 +1,56 @@
 body {
-  background-color: blueviolet;
+  background-color: #c86f93;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #ac2793;
+  padding: 60px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 33px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  padding: 12px;
+  border-style: double;
+}
+
+.city {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px dashed whitesmoke;
+}
+
+.city:last-child {
+  border: none;
+}
+
+.date {
+  opacity: 0.7;
+}
+
+.time {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+footer {
+  font-size: 10px;
+  opacity: 0.7;
 }
