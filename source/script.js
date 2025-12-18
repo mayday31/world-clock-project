@@ -15,3 +15,21 @@ setInterval(function () {
   secondCityDate.innerHTML = secondCityLocal.format("dddd MMMM Do, YYYY");
   secondCityTime.innerHTML = secondCityLocal.format("HH:mm:ss");
 }, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let chooseCity = document.querySelector("#cities");
+  chooseCity.innerHTML = `
+      <div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("dddd MMMM Do, YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format("HH:mm:ss")}</div>
+        </div>`;
+}
+
+let citySelect = document.querySelector("#city-select");
+citySelect.addEventListener("change", updateCity);
